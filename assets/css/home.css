@@ -1,0 +1,99 @@
+:root {
+  --home-bg-top: rgba(29, 78, 216, 0.12);
+  --home-bg-bottom: rgba(249, 115, 22, 0.10);
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, var(--home-bg-top), transparent 30%),
+    radial-gradient(circle at top right, var(--home-bg-bottom), transparent 26%),
+    var(--bg);
+}
+
+.hero {
+  padding-block: clamp(3rem, 7vw, 5.5rem) clamp(2rem, 5vw, 3rem);
+}
+
+.hero .container {
+  max-width: 980px;
+}
+
+.hero h1 {
+  max-width: 13ch;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+}
+
+.lede {
+  max-width: 66ch;
+  font-size: clamp(1.05rem, 1.6vw, 1.22rem);
+}
+
+.projects {
+  padding-block: clamp(2rem, 5vw, 4rem) clamp(3rem, 7vw, 5rem);
+}
+
+.projects .container {
+  max-width: 980px;
+}
+
+.section-title {
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-title::after {
+  opacity: 0.75;
+}
+
+.project-entry {
+  margin: 0 0 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) + 4px);
+  background: color-mix(in oklab, var(--bg) 82%, var(--bg-elev));
+  box-shadow: var(--shadow);
+}
+
+.project-entry__title {
+  margin-top: 0;
+  font-size: 1.35rem;
+}
+
+.project-entry__summary {
+  color: var(--fg-muted);
+  font-size: 1.02rem;
+}
+
+.project-entry__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.project-entry__tags li {
+  background: color-mix(in oklab, var(--bg) 70%, #dbeafe);
+  color: var(--tag-fg);
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.project-entry__body {
+  max-width: 70ch;
+}
+
+@media (max-width: 640px) {
+  .hero h1 {
+    max-width: 100%;
+  }
+
+  .project-entry {
+    padding: 1rem;
+  }
+}

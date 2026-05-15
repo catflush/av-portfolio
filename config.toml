@@ -12,70 +12,18 @@ unsafe = true
 author = "Thu Trang Eva Ha"
 description = "A bilingual showcase of accessible web projects and creative work."
 eyebrow = "Portfolio · 2019–2026"
-heroTitle = "AV Content Creator & Accessibility Specialist: Crafting high-impact media for everyone."
-heroDescription = "Selected work across audio-visual production, web, editorial, and community events, shaped with clarity, access, and impact in mind."
-ctaLabel = "View My Work"
-ctaURL = "#highlights"
-aboutSummary = "I am a creative professional with a strong focus on digital media design, user interaction, and education. My work breaks down barriers between people and digital systems and turns communication into something clear, engaging, and accessible."
-contactSummary = "Open to collaborations across audiovisual work, web publishing, editorial systems, and accessibility-focused communication."
-
-[[params.proofBar]]
-label = "Accessibility"
-
-[[params.proofBar]]
-label = "Audio-Visual"
-
-[[params.proofBar]]
-label = "Editorial"
-
-[[params.proofBar]]
-label = "Community"
-
-[[params.highlights]]
-title = "MemeWARLAB / ContentLAB™"
-summary = "Open workshop series focused on constructive content creation, viral marketing, and community building."
-url = "/projects/schmiede-content-production/"
-
-[[params.highlights]]
-title = "GLOBAL FYRE 2099™"
-summary = "Conceptual event series that turns audio-visual performance into immersive social and digital experiences."
-url = "/projects/event-organization/"
-
-[[params.highlights]]
-title = "Underground Resistance"
-summary = "A project that connects media, culture, and public-facing storytelling through a clear editorial lens."
-url = "/projects/underground-resistance/"
-
-[[params.contactLinks]]
-label = "GitHub"
-url = "https://github.com/catflush"
-
-[[params.contactLinks]]
-label = "YouTube"
-url = "https://www.youtube.com/@schmiedefestival/videos"
-
-[[params.contactLinks]]
-label = "Twitch"
-url = "https://www.twitch.tv/schmiedefestival"
-
-[[params.contactLinks]]
-label = "TikTok"
-url = "https://www.tiktok.com/@schmiedefestival"
+heroTitle = "Selected works across Audio-Visual production, web, editorial and community events"
+heroDescription = "Redesigned existing works with a focus on accessibility by following the Web Content Accessibility Guidelines 2.2, turning the content into a readable experience through the implementation of an audio guide, video transcripts, summaries and accessible layouts. Afterwards a collection of visual works, such as event promotion graphics, photos and videos."
 
 [[menu.main]]
-name = "About"
-url = "/#about"
+name = "Projects"
+url = "/projects/"
 weight = 10
 
 [[menu.main]]
-name = "Work"
-url = "/#highlights"
+name = "About"
+url = "/about/"
 weight = 20
-
-[[menu.main]]
-name = "Contact"
-url = "/#contact"
-weight = 30
 
 [taxonomies]
 tag = "tags"
