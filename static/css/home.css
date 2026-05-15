@@ -1,0 +1,211 @@
+:root {
+  --home-accent: #1d4ed8;
+  --home-accent-strong: #0f172a;
+  --home-soft: color-mix(in oklab, var(--bg) 84%, #dbeafe);
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(29, 78, 216, 0.12), transparent 32%),
+    radial-gradient(circle at top right, rgba(249, 115, 22, 0.10), transparent 24%),
+    var(--bg);
+}
+
+.hero--portfolio {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(3rem, 8vw, 6rem) clamp(2rem, 5vw, 4rem);
+}
+
+.hero--portfolio::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -30% auto;
+  width: 24rem;
+  height: 24rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(29, 78, 216, 0.18), transparent 70%);
+  pointer-events: none;
+}
+
+.hero-grid,
+.section-grid,
+.contact-panel {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hero-grid {
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.9fr);
+  align-items: start;
+}
+
+.hero-copy h1 {
+  max-width: 12ch;
+  margin-bottom: 1rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  background: linear-gradient(135deg, var(--home-accent), #2563eb);
+  color: #fff;
+  box-shadow: 0 14px 36px rgba(29, 78, 216, 0.22);
+}
+
+.button-secondary {
+  background: color-mix(in oklab, var(--bg) 72%, var(--bg-elev));
+  border-color: var(--border);
+  color: var(--fg);
+}
+
+.hero-panel,
+.highlight-card,
+.contact-panel {
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) + 4px);
+  background: color-mix(in oklab, var(--bg) 82%, var(--bg-elev));
+  box-shadow: var(--shadow);
+}
+
+.hero-panel,
+.contact-panel {
+  padding: 1.25rem;
+}
+
+.panel-label,
+.highlight-card__kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--fg-muted);
+  margin: 0 0 0.9rem;
+}
+
+.proof-bar {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.pill {
+  padding: 0.55rem 0.8rem;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--bg) 66%, #dbeafe);
+  color: var(--home-accent-strong);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.panel-note {
+  margin: 0;
+  color: var(--fg-muted);
+}
+
+.section {
+  padding-block: clamp(2rem, 5vw, 4rem);
+}
+
+.section h2 {
+  margin-top: 0;
+  max-width: 14ch;
+}
+
+.section-about .section-grid {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: start;
+}
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.highlight-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.2rem;
+  color: inherit;
+  text-decoration: none;
+  min-height: 100%;
+}
+
+.highlight-card:hover {
+  border-color: color-mix(in oklab, var(--accent) 60%, var(--border));
+}
+
+.highlight-card h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.highlight-card p {
+  margin: 0;
+  color: var(--fg-muted);
+}
+
+.highlight-card__link {
+  margin-top: auto;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.contact-panel {
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.9fr);
+  align-items: center;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: flex-start;
+}
+
+@media (max-width: 860px) {
+  .hero-grid,
+  .section-about .section-grid,
+  .contact-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-actions,
+  .contact-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button {
+    width: 100%;
+  }
+}

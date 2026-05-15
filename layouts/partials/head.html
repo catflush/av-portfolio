@@ -1,0 +1,33 @@
+{{ $desc := .Description | default .Summary | default site.Params.description }}
+<meta name="description" content="{{ $desc }}">
+<meta name="author" content="{{ site.Params.author | default "" }}">
+<meta name="theme-color" content="#0b0d10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<link rel="canonical" href="{{ .Permalink }}">
+
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+{{ with .Params.cover }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+<meta name="twitter:card" content="summary_large_image">
+
+{{ $css := resources.Get "css/main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{ if .IsHome }}
+<link rel="stylesheet" href="{{ "/css/home.css" | relURL }}">
+{{ end }}
+
+{{ if .IsPage }}{{ if eq .Section "projects" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": {{ .Title | jsonify }},
+  "description": {{ $desc | jsonify }},
+  "url": {{ .Permalink | jsonify }}{{ with .Params.cover }},
+  "image": {{ (. | absURL) | jsonify }}{{ end }}{{ with .Params.liveURL }},
+  "sameAs": [{{ . | jsonify }}]{{ end }}
+}
+</script>
+{{ end }}{{ end }}

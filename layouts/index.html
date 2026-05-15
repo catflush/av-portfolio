@@ -1,0 +1,69 @@
+{{ define "main" }}
+<section class="hero hero--portfolio" aria-labelledby="hero-title">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">{{ site.Params.eyebrow | default "Selected work" }}</p>
+      <h1 id="hero-title">{{ site.Params.heroTitle | default site.Title }}</h1>
+      {{ with site.Params.heroDescription }}<p class="lede">{{ . }}</p>{{ end }}
+      <div class="hero-actions">
+        <a class="button button-primary" href="{{ site.Params.ctaURL | default "#highlights" | relURL }}">{{ site.Params.ctaLabel | default "View My Work" }}</a>
+        <a class="button button-secondary" href="#about">About</a>
+      </div>
+    </div>
+
+    <aside class="hero-panel" aria-label="Proof bar and summary">
+      <p class="panel-label">Proof bar</p>
+      <ul class="proof-bar" aria-label="Core strengths">
+        {{ range site.Params.proofBar }}
+          <li class="pill">{{ .label }}</li>
+        {{ end }}
+      </ul>
+      <p class="panel-note">Accessibility-first, project-based storytelling, and web publishing with a focus on clarity.</p>
+    </aside>
+  </div>
+</section>
+
+<section id="about" class="section section-about" aria-labelledby="about-title">
+  <div class="container section-grid">
+    <div>
+      <p class="eyebrow">About</p>
+      <h2 id="about-title">Built for clear, accessible communication.</h2>
+    </div>
+    <div class="prose">
+      <p>{{ site.Params.aboutSummary }}</p>
+      <p><a href="{{ "/about/" | relURL }}">Read the full about page</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="highlights" class="section section-highlights" aria-labelledby="highlights-title">
+  <div class="container">
+    <p class="eyebrow">Curated highlights</p>
+    <div class="highlight-grid">
+      {{ range site.Params.highlights }}
+        <a class="highlight-card" href="{{ .url | relURL }}">
+          <p class="highlight-card__kicker">Project</p>
+          <h3>{{ .title }}</h3>
+          <p>{{ .summary }}</p>
+          <span class="highlight-card__link">Open project</span>
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section section-contact" aria-labelledby="contact-title">
+  <div class="container contact-panel">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h2 id="contact-title">Want to collaborate on an accessible project?</h2>
+      <p>{{ site.Params.contactSummary }}</p>
+    </div>
+    <div class="contact-links" aria-label="Contact links">
+      {{ range site.Params.contactLinks }}
+        <a class="button button-secondary" href="{{ .url }}" rel="external noopener">{{ .label }}</a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
