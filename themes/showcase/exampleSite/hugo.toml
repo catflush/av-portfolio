@@ -1,0 +1,23 @@
+baseURL = "https://example.com/"
+languageCode = "en-us"
+title = "Ada Lin — Projects"
+theme = "showcase"
+
+[params]
+  author = "Ada Lin"
+  description = "A small showcase of accessible, well-crafted web projects."
+  eyebrow = "Selected work · 2024–2026"
+  heroTitle = "Design-led web projects, built to be accessible by default."
+  heroDescription = "I'm Ada — a product engineer focused on clean interfaces, fast performance, and WCAG 2.2 AA accessibility."
+
+[[menu.main]]
+  name = "Projects"
+  url  = "/projects/"
+  weight = 10
+[[menu.main]]
+  name = "About"
+  url  = "/about/"
+  weight = 20
+
+[markup.goldmark.renderer]
+  unsafe = true

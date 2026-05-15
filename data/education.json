@@ -1,0 +1,23 @@
+[
+  {
+    "school": "WBS Coding School, Berlin",
+    "degree": "Continuing education in full-stack web and app development",
+    "major": "Web development",
+    "notes": "Career transition into web development and digital production.",
+    "range": "2024 - 2025"
+  },
+  {
+    "school": "University of Arts Linz",
+    "degree": "BA and MA",
+    "major": "Timebased and Interactive Media; Interface Cultures",
+    "notes": "Focus on interaction design, human-machine interaction, music, and performance art.",
+    "range": "2014 - 2023"
+  },
+  {
+    "school": "HLW Fohnsdorf",
+    "degree": "Matura",
+    "major": "Business college",
+    "notes": "Secondary school leaving certificate.",
+    "range": "2009 - 2013"
+  }
+]

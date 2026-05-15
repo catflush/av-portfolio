@@ -1,0 +1,11 @@
+# Generated files by Hugo
+public/
+resources/
+.hugo_build.lock
+
+# macOS system files
+.DS_Store
+
+# Temporary files
+*.swp
+*~

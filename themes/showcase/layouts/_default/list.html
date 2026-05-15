@@ -1,0 +1,21 @@
+{{ define "main" }}
+<section class="page-head">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
+  </div>
+</section>
+<section class="projects">
+  <div class="container">
+    {{ if .Pages }}
+    <div class="grid" role="list">
+      {{ range .Pages }}
+        <div role="listitem">{{ partial "project-card.html" . }}</div>
+      {{ end }}
+    </div>
+    {{ else }}
+      {{ .Content }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}

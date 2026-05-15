@@ -1,0 +1,12 @@
+name = "Showcase"
+license = "MIT"
+licenselink = "https://github.com/yourname/showcase/blob/main/LICENSE"
+description = "An accessible Hugo theme to showcase projects as cards. Built with WCAG 2.2 AA in mind."
+homepage = "https://example.com/"
+tags = ["portfolio", "projects", "accessible", "wcag", "minimal", "responsive"]
+features = ["accessibility", "responsive", "dark-mode", "cards", "seo"]
+min_version = "0.110.0"
+
+[author]
+  name = "Your Name"
+  homepage = "https://example.com/"

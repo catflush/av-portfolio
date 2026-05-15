@@ -1,0 +1,62 @@
+[
+  {
+    "grouping": "Web and development",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "PHP",
+      "React",
+      "Node.js",
+      "REST APIs",
+      "TYPO3",
+      "WordPress",
+      "MySQL",
+      "PostgreSQL",
+      "MongoDB"
+    ]
+  },
+  {
+    "grouping": "Design and multimedia",
+    "skills": [
+      "Adobe Creative Suite",
+      "Figma",
+      "Inkscape",
+      "GIMP",
+      "Canva",
+      "Adobe Premiere Pro",
+      "CapCut",
+      "OBS Studio",
+      "Ableton Live",
+      "Bitwig",
+      "Reaper"
+    ]
+  },
+  {
+    "grouping": "Social and platforms",
+    "skills": [
+      "Facebook",
+      "LinkedIn",
+      "Instagram",
+      "X (Twitter)",
+      "GitHub",
+      "VS Code",
+      "MS Office",
+      "Google Workspace",
+      "Slack",
+      "Teams"
+    ]
+  },
+  {
+    "grouping": "Digital fabrication and 3D",
+    "skills": [
+      "Laser cutter",
+      "3D printing",
+      "Vinyl plotter",
+      "Embroidery machine",
+      "3D slicing",
+      "Blender",
+      "Unity"
+    ]
+  }
+]

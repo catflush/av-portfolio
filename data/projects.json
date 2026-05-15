@@ -1,0 +1,60 @@
+{
+  "en": [
+    {
+      "title": "Schmiede Media Production",
+      "description": "A bilingual portfolio built with Hugo Resume theme showcasing CV, projects, and publications.",
+      "tags": ["Hugo", "Static Site", "Responsive Design"],
+      "image": "images/projects/portfolio.png",
+      "link": "https://example.com",
+      "featured": true,
+      "fact": "Supports both English and German content with shared data model"
+    },
+    {
+      "title": "Event Coordination Platform",
+      "description": "A web-based system for managing community events and volunteer coordination.",
+      "tags": ["Web Development", "Event Management", "CMS"],
+      "image": "images/projects/events.png",
+      "link": "https://example.com/events",
+      "featured": true,
+      "fact": "Reduced event planning overhead by 40%"
+    },
+    {
+      "title": "Social Media Campaign",
+      "description": "Visual campaign promoting local FLINTA artists in the music scene.",
+      "tags": ["Social Media", "Graphic Design", "Content Strategy"],
+      "image": "images/projects/campaign.png",
+      "link": "https://example.com/campaign",
+      "featured": false,
+      "fact": "Reached 10,000+ community members"
+    }
+  ],
+  "de": [
+    {
+      "title": "Persönliche Portfolio-Website",
+      "description": "Ein zweisprachiges Portfolio mit dem Hugo Resume Theme zur Präsentation von Lebenslauf, Projekten und Publikationen.",
+      "tags": ["Hugo", "Static Site", "Responsive Design"],
+      "image": "images/projects/portfolio.png",
+      "link": "https://example.com",
+      "featured": true,
+      "fact": "Unterstützt englische und deutsche Inhalte mit gemeinsamen Datenmodellen"
+    },
+    {
+      "title": "Veranstaltungskoordinationsplattform",
+      "description": "Ein webbasiertes System zur Verwaltung von Gemeinschaftsveranstaltungen und Freiwilligenkoordinierung.",
+      "tags": ["Webentwicklung", "Veranstaltungsmanagement", "CMS"],
+      "image": "images/projects/events.png",
+      "link": "https://example.com/events",
+      "featured": true,
+      "fact": "Reduzierte die Veranstaltungsplanung um 40%"
+    },
+    {
+      "title": "Social-Media-Kampagne",
+      "description": "Visuelle Kampagne zur Förderung lokaler FLINTA-Künstler in der Musikszene.",
+      "tags": ["Social Media", "Grafikdesign", "Content-Strategie"],
+      "image": "images/projects/campaign.png",
+      "link": "https://example.com/campaign",
+      "featured": false,
+      "fact": "Erreichte über 10.000 Gemeinschaftsmitglieder"
+    }
+  ]
+}

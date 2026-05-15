@@ -1,0 +1,29 @@
+title = "Thu Trang Eva Ha"
+baseURL = "http://localhost:1313/"
+theme = "showcase"
+locale = "en"
+enableGitInfo = false
+enableEmoji = true
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[params]
+author = "Thu Trang Eva Ha"
+description = "A bilingual showcase of accessible web projects and creative work."
+eyebrow = "Portfolio · 2019–2026"
+heroTitle = "Selected works across Audio-Visual production, web, editorial and community events"
+heroDescription = "Redesigned existing works with a focus on accessibility by following the Web Content Accessibility Guidelines 2.2, turning the content into a readable experience through the implementation of an audio guide, video transcripts, summaries and accessible layouts. Afterwards a collection of visual works, such as event promotion graphics, photos and videos."
+
+[[menu.main]]
+name = "Projects"
+url = "/projects/"
+weight = 10
+
+[[menu.main]]
+name = "About"
+url = "/about/"
+weight = 20
+
+[taxonomies]
+tag = "tags"
