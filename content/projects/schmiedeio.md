@@ -1,13 +1,11 @@
 ---
-title: "Improved Schmiede Website (2025)"
+title: "Improved Schmiede Website"
 date: 2026-05-12
 summary: "A portfolio that shows past projects produced at Schmiede Festival in Hallein, Austria and publications in a clean, accessible experience."
 tags: ["Redesign", "Accessibility", "Web Development"]
 ---
 
 ![[schmiede-io-head.png]]
-
-## **Improved Schmiede Website (2025)**
 
 A redesign of the Schmiede website with focus on accessibility and usability, Turning it into a web-based system for managing community events, review their application, and volunteer coordination. The platform helps organize event logistics, connect through sharing content and facilitate a seamless communication and collaboration in one place.
 
