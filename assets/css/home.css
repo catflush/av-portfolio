@@ -11,7 +11,7 @@ body {
 }
 
 .hero {
-  padding-block: clamp(3rem, 7vw, 5.5rem) clamp(2rem, 5vw, 3rem);
+  padding-block: clamp(3.5rem, 9vw, 6.25rem) clamp(2.25rem, 5vw, 3.5rem);
 }
 
 .hero .container {
@@ -26,12 +26,12 @@ body {
 }
 
 .lede {
-  max-width: 66ch;
+  max-width: min(66ch, 36rem);
   font-size: clamp(1.05rem, 1.6vw, 1.22rem);
 }
 
 .projects {
-  padding-block: clamp(2rem, 5vw, 4rem) clamp(3rem, 7vw, 5rem);
+  padding-block: clamp(3rem, 7vw, 5rem) clamp(3.5rem, 8vw, 6rem);
 }
 
 .projects .container {
@@ -54,6 +54,14 @@ body {
   border-radius: calc(var(--radius) + 4px);
   background: color-mix(in oklab, var(--bg) 82%, var(--bg-elev));
   box-shadow: var(--shadow);
+  transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease, background-color .24s ease;
+}
+
+.project-entry:hover,
+.project-entry:focus-within {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, .22);
+  border-color: color-mix(in oklab, var(--accent) 40%, var(--border));
 }
 
 .project-entry__title {
@@ -69,19 +77,21 @@ body {
 .project-entry__tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.35rem;
   list-style: none;
   padding: 0;
-  margin: 0 0 1rem;
+  margin: 0 0 0.85rem;
 }
 
 .project-entry__tags li {
-  background: color-mix(in oklab, var(--bg) 70%, #dbeafe);
+  background: color-mix(in oklab, var(--tag-bg) 45%, transparent);
   color: var(--tag-fg);
+  border: 1px solid color-mix(in oklab, var(--tag-fg) 20%, var(--border));
   border-radius: 999px;
-  padding: 0.35rem 0.7rem;
-  font-size: 0.88rem;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.74rem;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .project-entry__body {
@@ -91,6 +101,10 @@ body {
 @media (max-width: 640px) {
   .hero h1 {
     max-width: 100%;
+  }
+
+  .site-nav a {
+    font-size: 1rem;
   }
 
   .project-entry {

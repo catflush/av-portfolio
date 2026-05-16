@@ -11,12 +11,11 @@ tags:
   ]
 ---
 
-An open workshop series promoting culturally relevant meme creation. The lab explores the intersection of digital culture, live commentary, and creative expression.
+I initiated and co-hosted Meme War Lab, an open, interactive workshop series that explored the intersection of digital culture, live commentary, and creative expression. Through this lab, I provided a collaborative space to produce culturally relevant memes, empowering participants to master the visual language of the digital age.
 
-Participants successfully created content and uploaded it. Attending a live stream for the very first time, comment on happenings, Strategically making open petition format to call for donation.
+A major highlight of the lab was the foundation of the Schmiede Gewerkschaft alliance, which was formed in close collaboration with the participants. We utilized Kunstfestival Wassibauer—a parallel satirical festival of the Schmiede Festival itself—and initiated Instagram, YouTube, and Twitch Live Streams as our primary platforms for broadcasting and real-time streaming.
 
-- [Kunstfestival Wassibauer] (https://www.youtube.com/@KunstfestivalWassibauer)
-- Live Stream to Youtube/Tik Tok
-- Help Christopher to fund a new flight ticket back home
--
-- Picture 5
+The project took a forward-thinking, satirical approach, by actively striving for F.U.N. (Finally Understanding Nothing), dedicated to spreading the memes of production.
+
+MEME WAR LAB ENCOURAGES RESPONSIBLE MEME CREATION AND RESPECTS THE RIGHTS OF CONTENT CREATORS. THE WORKSHOP PROMOTES ETHICAL PRACTICES AND URGES PARTICIPANTS TO ENGAGE IN CONSTRUCTIVE AND POSITIVE MEME CULTURE.
+BY THE END OF MEMEWARLAB, YOU'LL EMERGE AS A MEME MAESTRO EQUIPPED WITH THE KNOWLEDGE AND SKILLS TO CRAFT ENGAGING, SHAREABLE, AND CULTURALLY RELEVANT CONTENT. PREPARE TO JOIN THE RANKS OF INTERNET TASTEMAKERS AND MEME AFICIONADOS WHO UNDERSTAND THE LANGUAGE OF THE DIGITAL AGE.
