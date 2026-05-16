@@ -18,15 +18,7 @@ body {
 }
 
 .hero {
-  width: 100vw;
-  min-height: 100vh;
-  min-height: 100svh;
-  min-height: 100dvh;
-  margin-inline: calc(50% - 50vw);
-  display: grid;
-  place-items: center;
-  padding: clamp(1rem, 3vw, 2rem);
-  overflow: hidden;
+  padding-block: clamp(3rem, 8vw, 5.5rem);
   background:
     linear-gradient(var(--hero-overlay), var(--hero-overlay)),
     radial-gradient(circle at 12% 20%, color-mix(in oklab, var(--accent) 46%, transparent), transparent 42%),
@@ -37,79 +29,74 @@ body {
 .hero__inner {
   max-width: 980px;
   width: 100%;
-  text-align: left;
 }
 
 .hero h1 {
-  margin-inline: auto;
   max-width: 13ch;
   font-size: clamp(2.4rem, 6vw, 4rem);
   line-height: 1.02;
   letter-spacing: -0.03em;
+  margin: 0 0 0.75rem;
 }
 
-.lede {
-  margin-inline: auto;
+.hero-description {
   max-width: min(66ch, 36rem);
   font-size: clamp(1.05rem, 1.6vw, 1.22rem);
+  color: var(--fg-muted);
+  margin: 0;
+  line-height: 1.7;
 }
 
-/* ---------- Hero projects list ---------- */
-.hero-list {
-  margin: clamp(1.25rem, 3vw, 2rem) 0 0;
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: clamp(.6rem, 2vw, 1rem);
-  width: 100%;
+.page-description {
+  margin: 0.5rem 0 0;
+  color: var(--fg-muted);
+  font-size: clamp(1rem, 1.6vw, 1.1rem);
+  max-width: 60ch;
 }
-.hero-list__item {
-  background: color-mix(in oklab, var(--bg) 82%, var(--bg-elev));
-  border: 1px solid var(--border);
-  border-radius: calc(var(--radius) - 4px);
-  padding: .65rem .8rem;
-  display: flex;
-  flex-direction: column;
-  gap: .45rem;
-  align-items: flex-start;
-}
-.hero-list__link {
-  color: var(--fg);
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 1rem;
-}
-.hero-list__link:hover { text-decoration: underline; }
-.hero-tags {
-  list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .35rem;
-}
-.hero-tags__item {
-  font-size: .68rem; font-weight: 600; padding: .12rem .45rem; border-radius: 999px;
-  background: color-mix(in oklab, var(--tag-bg) 42%, transparent);
-  border: 1px solid color-mix(in oklab, var(--tag-fg) 18%, var(--border));
-  color: var(--tag-fg);
+
+.page-head {
+  padding-block: clamp(2.5rem, 5vw, 3.5rem) clamp(1.5rem, 3vw, 2rem);
 }
 
 .projects {
-  padding-block: clamp(3rem, 7vw, 5rem) clamp(3.5rem, 8vw, 6rem);
+  padding-block: clamp(2.5rem, 6vw, 4rem) clamp(2.5rem, 6vw, 4rem);
 }
 
 .projects .container {
   max-width: 980px;
 }
 
-.section-title {
-  align-items: center;
-  gap: 1rem;
+.projects .section-title {
+  font-size: 1.4rem;
+  margin: 0 0 1.5rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
 }
 
-.section-title::after {
+.projects .section-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
   opacity: 0.75;
 }
 
 .projects .grid {
   gap: clamp(0.9rem, 2.2vw, 1.35rem);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .projects .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .projects .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .projects .card {

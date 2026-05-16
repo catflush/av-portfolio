@@ -17,12 +17,12 @@ heroDescription = "Selected works across Audio-Visual production, web, editorial
 
 [[menu.main]]
 name = "Projects"
-url = "/projects/"
+url = "/av-portfolio/projects/"
 weight = 10
 
 [[menu.main]]
 name = "About"
-url = "/about/"
+url = "/av-portfolio/about/"
 weight = 20
 
 [taxonomies]
