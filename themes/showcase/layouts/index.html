@@ -1,6 +1,6 @@
 {{ define "main" }}
 <section class="hero" aria-labelledby="hero-title">
-  <div class="container">
+  <div class="hero__inner container">
     <p class="eyebrow">{{ site.Params.eyebrow | default "Selected work" }}</p>
     <h1 id="hero-title">{{ site.Params.heroTitle | default site.Title }}</h1>
     {{ with site.Params.heroDescription }}<div class="lede">{{ . | markdownify }}</div>{{ end }}

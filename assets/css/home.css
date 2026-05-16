@@ -1,6 +1,13 @@
 :root {
   --home-bg-top: rgba(29, 78, 216, 0.12);
   --home-bg-bottom: rgba(249, 115, 22, 0.10);
+  --hero-overlay: rgba(8, 14, 22, 0.42);
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: clip;
 }
 
 body {
@@ -11,14 +18,30 @@ body {
 }
 
 .hero {
-  padding-block: clamp(3.5rem, 9vw, 6.25rem) clamp(2.25rem, 5vw, 3.5rem);
+  width: 100vw;
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
+  margin-inline: calc(50% - 50vw);
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 3vw, 2rem);
+  overflow: hidden;
+  background:
+    linear-gradient(var(--hero-overlay), var(--hero-overlay)),
+    radial-gradient(circle at 12% 20%, color-mix(in oklab, var(--accent) 46%, transparent), transparent 42%),
+    radial-gradient(circle at 88% 82%, color-mix(in oklab, #22d3ee 36%, transparent), transparent 40%),
+    linear-gradient(145deg, color-mix(in oklab, var(--bg-elev) 65%, var(--bg)), var(--bg));
 }
 
-.hero .container {
+.hero__inner {
   max-width: 980px;
+  width: 100%;
+  text-align: center;
 }
 
 .hero h1 {
+  margin-inline: auto;
   max-width: 13ch;
   font-size: clamp(2.4rem, 6vw, 4rem);
   line-height: 1.02;
@@ -26,6 +49,7 @@ body {
 }
 
 .lede {
+  margin-inline: auto;
   max-width: min(66ch, 36rem);
   font-size: clamp(1.05rem, 1.6vw, 1.22rem);
 }
@@ -99,6 +123,10 @@ body {
 }
 
 @media (max-width: 640px) {
+  .hero {
+    padding: 1rem;
+  }
+
   .hero h1 {
     max-width: 100%;
   }
