@@ -1,5 +1,5 @@
 title = "Thu Trang Eva Ha"
-baseURL = "/av-portfolio"
+baseURL = "https://catflush.github.io/av-portfolio/"
 theme = "showcase"
 locale = "en"
 enableGitInfo = false

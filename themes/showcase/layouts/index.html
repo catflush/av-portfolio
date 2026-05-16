@@ -5,11 +5,11 @@
     {{ $projects := where site.RegularPages "Section" "projects" }} {{ if
     $projects }}
     <ul class="hero-list" aria-label="Projects">
-      {{ range $projects }}
+      {{ range $projects }} {{ $projectTitle := .Title }}
       <li class="hero-list__item">
         <a class="hero-list__link" href="{{ .RelPermalink }}">{{ .Title }}</a>
         {{ with .Params.tags }}
-        <ul class="hero-tags" aria-label="Tags for {{ .Title }}">
+        <ul class="hero-tags" aria-label="Tags for {{ $projectTitle }}">
           {{ range . }}
           <li class="hero-tags__item">{{ . }}</li>
           {{ end }}
