@@ -1,5 +1,5 @@
 title = "Thu Trang Eva Ha"
-baseURL = "/"
+baseURL = "/av-portfolio"
 theme = "showcase"
 locale = "en"
 enableGitInfo = false
