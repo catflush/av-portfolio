@@ -12,6 +12,7 @@
     {{ end }}
     <div class="card-body">
       <h2 class="card-title" id="t-{{ $p.RelPermalink | urlize }}">{{ $p.Title }}</h2>
+      {{ with $p.Params.summary | default $p.Summary }}<p class="card-summary">{{ . }}</p>{{ end }}
       {{ with $p.Params.tags }}
         <ul class="card-tags" aria-label="Tags">
           {{ range . }}<li>{{ . }}</li>{{ end }}
