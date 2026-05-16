@@ -8,8 +8,9 @@
       {{ range $projects }}
       <li class="hero-list__item">
         <a class="hero-list__link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ $projectTitle := .Title }}
         {{ with .Params.tags }}
-        <ul class="hero-tags" aria-label="Tags for {{ .Title }}">
+        <ul class="hero-tags" aria-label="Tags for {{ $projectTitle }}">
           {{ range . }}
           <li class="hero-tags__item">{{ . }}</li>
           {{ end }}
