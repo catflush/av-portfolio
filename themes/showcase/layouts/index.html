@@ -2,22 +2,27 @@
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero__inner container">
     <p class="eyebrow">{{ site.Params.eyebrow | default "Selected work" }}</p>
-    {{ $projects := where site.RegularPages "Section" "projects" }}
-    {{ if $projects }}
-      <ul class="hero-list" aria-label="Projects">
-        {{ range $projects }}
-          <li class="hero-list__item">
-            <a class="hero-list__link" href="{{ .RelPermalink }}">{{ .Title }}</a>
-            {{ with .Params.tags }}
-              <ul class="hero-tags" aria-label="Tags for {{ .Title }}">
-                {{ range . }}<li class="hero-tags__item">{{ . }}</li>{{ end }}
-              </ul>
-            {{ end }}
-          </li>
+    {{ $projects := where site.RegularPages "Section" "projects" }} {{ if
+    $projects }}
+    <ul class="hero-list" aria-label="Projects">
+      {{ range $projects }}
+      <li class="hero-list__item">
+        <a class="hero-list__link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ with .Params.tags }}
+        <ul class="hero-tags" aria-label="Tags for {{ .Title }}">
+          {{ range . }}
+          <li class="hero-tags__item">{{ . }}</li>
+          {{ end }}
+        </ul>
         {{ end }}
-      </ul>
+      </li>
+      {{ end }}
+    </ul>
     {{ else }}
-      <p class="lede">No projects yet. Add one with <code>hugo new projects/my-project.md</code>.</p>
+    <p class="lede">
+      No projects yet. Add one with
+      <code>hugo new projects/my-project.md</code>.
+    </p>
     {{ end }}
   </div>
 </section>
