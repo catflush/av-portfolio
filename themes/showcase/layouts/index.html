@@ -12,25 +12,13 @@
     <h2 id="projects-title" class="section-title">Projects</h2>
     {{ $projects := where site.RegularPages "Section" "projects" }}
     {{ if $projects }}
-      {{ range $projects }}
-        <article class="project-entry">
-          <h2 class="project-entry__title">{{ .Title }}</h2>
-          {{ with .Params.summary }}<p class="project-entry__summary">{{ . }}</p>{{ end }}
-          {{ with .Params.tags }}
-            <ul class="project-entry__tags" aria-label="Tags">
-              {{ range . }}<li>{{ . }}</li>{{ end }}
-            </ul>
-          {{ end }}
-          {{ with .Params.cover }}
-            <figure class="project-entry__cover">
-              <img src="{{ . | relURL }}" alt="{{ $.Params.coverAlt | default "" }}" loading="lazy" decoding="async">
-            </figure>
-          {{ end }}
-          <div class="project-entry__body prose">
-            {{ .Content }}
+      <div class="grid" role="list">
+        {{ range $projects }}
+          <div role="listitem">
+            {{ partial "project-card.html" . }}
           </div>
-        </article>
-      {{ end }}
+        {{ end }}
+      </div>
     {{ else }}
       <p>No projects yet. Add one with <code>hugo new projects/my-project.md</code>.</p>
     {{ end }}

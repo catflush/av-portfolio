@@ -6,10 +6,7 @@ tags: ["Redesign", "Accessibility", "Web Development"]
 ---
 
 ![[schmiede-io-head.png]]
+I conceptualized and led the comprehensive redesign of the Schmiede website with a clear focus on accessibility and usability. Through this initiative, I transformed the static presence into a web-based system dedicated to managing community events, reviewing applications, and coordinating volunteers. The platform successfully optimizes event logistics, connects the community through content sharing, and facilitates seamless communication and collaboration in one central location.
 
-A redesign of the Schmiede website with focus on accessibility and usability, Turning it into a web-based system for managing community events, review their application, and volunteer coordination. The platform helps organize event logistics, connect through sharing content and facilitate a seamless communication and collaboration in one place.
-
-- Webentwicklung & Design: Konzeption und Umsetzung einer responsiven Community-Plattform mit React und Tailwind CSS sowie Integration eines Event-Buchungssystems.
-- Backend & API-Testing: Implementierung von REST-APIs zur Datenverwaltung und systematisches Testen der Endpunkte mit Postman zur Sicherstellung der Backend-Stabilität.
-- Full Cycle Development: Verantwortung für den gesamten Software Lebenszyklus von der Wireframe-Phase über lokales Development bis zum Deployment auf render.com.
-  [LINK] [screenshot1] [screenshot2] [screenshot3]
+Regarding web development and design, I took full responsibility for the conception and implementation of a fully responsive community platform using React and Tailwind CSS while seamlessly integrating a tailored event booking system. On the backend and API testing side, I implemented robust REST APIs for efficient data management and conducted systematic endpoint testing with Postman to guarantee the stability and security of the architecture. Throughout the entire full-cycle development process, I managed the software lifecycle end-to-end, steering the project from the initial wireframe phase through local development to the successful deployment on render.com.
+[LINK] [screenshot1] [screenshot2] [screenshot3]
