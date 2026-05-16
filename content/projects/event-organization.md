@@ -15,8 +15,6 @@ tags:
 Promoter and Cultural Producer for conceptual party series with a focus on experimental soundscapes and rave experiences.
 This campaign paired visuals and messaging to support visibility for local FLINTA artists.
 
-## Highlights
-
 - Live Streaming events, recordings and broadcasts
 - Social Media Management
 - Promotion for local FLINTA artists

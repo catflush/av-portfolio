@@ -11,4 +11,3 @@ Structure:
 - Video proposal: A non-human video essay
 - Documentation of process in the form of a zine with manual
 - AUDIO GUIDE: "Listening Exercise"
--

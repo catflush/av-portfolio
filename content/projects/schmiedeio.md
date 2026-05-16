@@ -11,7 +11,5 @@ A redesign of the Schmiede website with focus on accessibility and usability, Tu
 
 - Webentwicklung & Design: Konzeption und Umsetzung einer responsiven Community-Plattform mit React und Tailwind CSS sowie Integration eines Event-Buchungssystems.
 - Backend & API-Testing: Implementierung von REST-APIs zur Datenverwaltung und systematisches Testen der Endpunkte mit Postman zur Sicherstellung der Backend-Stabilität.
-- Full Cycle Development: Verantwortung für den gesamten Software Lebenszyklus von der
-
-Wireframe-Phase über lokales Development bis zum Deployment auf render.com.
-[LINK] [screenshot1] [screenshot2] [screenshot3]
+- Full Cycle Development: Verantwortung für den gesamten Software Lebenszyklus von der Wireframe-Phase über lokales Development bis zum Deployment auf render.com.
+  [LINK] [screenshot1] [screenshot2] [screenshot3]

@@ -1,7 +1,7 @@
 ---
 title: "ContentLAB™"
 date: 2024-05-12
-summary: "
+summary: ""
 tags:
   [
     "AV Production",
