@@ -1,7 +1,7 @@
 ---
 title: "Global Fyre 2099™"
 date: 2026-05-10
-summary: "Promoter and Cultural Producer for conceptual party series with a focus on experimental soundscapes and rave experiences."
+summary: ""
 tags:
   [
     "Social Media",
@@ -12,7 +12,7 @@ tags:
   ]
 ---
 
-### :fire: Global Fyre 2099™
+Promoter and Cultural Producer for conceptual party series with a focus on experimental soundscapes and rave experiences.
 
 GLOBAL FYRE 2099™ presents a new series of ~conceptual parties~ to transform, dismember, recreate and transcend the new normal. The aim is to express our world’s state of unrest and anxiety, of technical progress and futuristic dreams. Through rejection in the contemporary club scene which is a loyal byproduct of Technocapitalism, GLOBAL FYRE 2099™ seeks most importantly F.U.N. (Finally Understanding Nothing) and P.L.U.R. (Peace Love Unity Respect) – enjoying on its own terms to define “what electronic club music should be” by dealing with the ultimately unknowable sonic possibilities to create an ecstatic rave journey on social media platforms.
 

@@ -1,7 +1,7 @@
 ---
 title: "MemeWARLAB™"
 date: 2026-05-12
-summary: "A portfolio that shows past projects produced at Schmiede Festival in Hallein, Austria and publications in a clean, accessible experience."
+summary: ""
 tags:
   [
     "Meme Education",
