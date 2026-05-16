@@ -1,6 +1,6 @@
 ---
 title: "Improved Schmiede Website"
-date: 2026-05-12
+date: 2025-05-12
 summary: ""
 tags: ["Redesign", "Accessibility", "Web Development"]
 ---

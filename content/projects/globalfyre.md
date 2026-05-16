@@ -1,6 +1,6 @@
 ---
 title: "Global Fyre 2099™"
-date: 2026-05-10
+date: 2022-05-10
 summary: ""
 tags:
   [

@@ -1,6 +1,6 @@
 ---
 title: "Underground Resistance"
-date: 2026-05-11
+date: 2021-05-11
 summary: ""
 tags: ["DIY", "Performance", "Zine", "residency"]
 ---

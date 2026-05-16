@@ -1,7 +1,7 @@
 ---
-title: "they_them2020 (2019-2024)"
-date: 2026-05-10
-summary: "Promoter and Cultural Producer for conceptual party series with a focus on experimental soundscapes and rave experiences."
+title: "they_them2020"
+date: 2020-05-10
+summary: ""
 tags:
   [
     "Social Media",
@@ -12,6 +12,7 @@ tags:
   ]
 ---
 
+Promoter and Cultural Producer for conceptual party series with a focus on experimental soundscapes and rave experiences.
 This campaign paired visuals and messaging to support visibility for local FLINTA artists.
 
 ## Highlights

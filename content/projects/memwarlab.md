@@ -1,6 +1,6 @@
 ---
 title: "MemeWARLAB™"
-date: 2026-05-12
+date: 2022-05-12
 summary: ""
 tags:
   [
