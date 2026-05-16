@@ -54,6 +54,43 @@ body {
   font-size: clamp(1.05rem, 1.6vw, 1.22rem);
 }
 
+/* ---------- Hero projects list ---------- */
+.hero-list {
+  margin: clamp(1.25rem, 3vw, 2rem) 0 0;
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(.6rem, 2vw, 1rem);
+  width: 100%;
+}
+.hero-list__item {
+  background: color-mix(in oklab, var(--bg) 82%, var(--bg-elev));
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) - 4px);
+  padding: .65rem .8rem;
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+  align-items: flex-start;
+}
+.hero-list__link {
+  color: var(--fg);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.hero-list__link:hover { text-decoration: underline; }
+.hero-tags {
+  list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .35rem;
+}
+.hero-tags__item {
+  font-size: .68rem; font-weight: 600; padding: .12rem .45rem; border-radius: 999px;
+  background: color-mix(in oklab, var(--tag-bg) 42%, transparent);
+  border: 1px solid color-mix(in oklab, var(--tag-fg) 18%, var(--border));
+  color: var(--tag-fg);
+}
+
 .projects {
   padding-block: clamp(3rem, 7vw, 5rem) clamp(3.5rem, 8vw, 6rem);
 }
