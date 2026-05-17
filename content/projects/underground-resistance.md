@@ -68,5 +68,5 @@ electrical activity
 to create sonic fiction of founders.
 ```
 
-
+![fungi-zine](/av-portfolio/images/projects/fungi-zine.png)
 
