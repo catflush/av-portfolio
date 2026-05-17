@@ -1,13 +1,16 @@
 :root {
   --home-bg-top: rgba(29, 78, 216, 0.12);
   --home-bg-bottom: rgba(249, 115, 22, 0.10);
-  --hero-overlay: rgba(8, 14, 22, 0.42);
 }
 
-html,
-body {
-  width: 100%;
-  overflow-x: clip;
+/* Improve contrast for dark mode text */
+:root[data-theme="dark"] {
+  --fg-muted: #d0d8e0;  /* Brighter off-white for better contrast on dark bg */
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 body {
@@ -18,17 +21,11 @@ body {
 }
 
 .hero {
-  padding-block: clamp(3rem, 8vw, 5.5rem);
-  background:
-    linear-gradient(var(--hero-overlay), var(--hero-overlay)),
-    radial-gradient(circle at 12% 20%, color-mix(in oklab, var(--accent) 46%, transparent), transparent 42%),
-    radial-gradient(circle at 88% 82%, color-mix(in oklab, #22d3ee 36%, transparent), transparent 40%),
-    linear-gradient(145deg, color-mix(in oklab, var(--bg-elev) 65%, var(--bg)), var(--bg));
+  padding-block: clamp(3rem, 7vw, 5.5rem) clamp(2rem, 5vw, 3rem);
 }
 
-.hero__inner {
+.hero .container {
   max-width: 980px;
-  width: 100%;
 }
 
 .hero h1 {
@@ -36,131 +33,92 @@ body {
   font-size: clamp(2.4rem, 6vw, 4rem);
   line-height: 1.02;
   letter-spacing: -0.03em;
-  margin: 0 0 0.75rem;
 }
 
-.hero-description {
-  max-width: min(66ch, 36rem);
+.lede {
+  max-width: 66ch;
   font-size: clamp(1.05rem, 1.6vw, 1.22rem);
-  color: var(--fg-muted);
-  margin: 0;
-  line-height: 1.7;
-}
-
-.page-description {
-  margin: 0.5rem 0 0;
-  color: var(--fg-muted);
-  font-size: clamp(1rem, 1.6vw, 1.1rem);
-  max-width: 60ch;
-}
-
-.page-head {
-  padding-block: clamp(2.5rem, 5vw, 3.5rem) clamp(1.5rem, 3vw, 2rem);
+  color: var(--fg);  /* Use main foreground for better contrast */
+  line-height: 1.7;  /* Increase line height for readability */
 }
 
 .projects {
-  padding-block: clamp(2.5rem, 6vw, 4rem) clamp(2.5rem, 6vw, 4rem);
+  padding-block: clamp(3rem, 8vw, 6rem) clamp(3rem, 8vw, 6rem);
 }
 
 .projects .container {
   max-width: 980px;
 }
 
-.projects .section-title {
-  font-size: 1.4rem;
-  margin: 0 0 1.5rem;
-  display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
+.section-title {
+  align-items: center;
+  gap: 1rem;
 }
 
-.projects .section-title::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: var(--border);
+.section-title::after {
   opacity: 0.75;
 }
 
-.projects .grid {
-  gap: clamp(0.9rem, 2.2vw, 1.35rem);
-  grid-template-columns: 1fr;
+.project-entry {
+  margin: 0 0 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) + 4px);
+  background: color-mix(in oklab, var(--bg) 82%, var(--bg-elev));
+  box-shadow: var(--shadow);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-@media (min-width: 640px) {
-  .projects .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.project-entry:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 12px 48px rgba(20, 24, 29, 0.12);
 }
 
-@media (min-width: 1000px) {
-  .projects .grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+:root[data-theme="dark"] .project-entry:hover {
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3);
 }
 
-.projects .card {
-  border-radius: calc(var(--radius) + 2px);
-  background: color-mix(in oklab, var(--bg) 78%, var(--bg-elev));
-  transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease;
+.project-entry__title {
+  margin-top: 0;
+  font-size: 1.35rem;
+  color: var(--fg);
 }
 
-.projects .card:hover,
-.projects .card:focus-within {
-  transform: translateY(-5px);
-  box-shadow: 0 14px 32px rgba(0, 0, 0, .24);
-  border-color: color-mix(in oklab, var(--accent) 38%, var(--border));
+.project-entry__summary {
+  color: var(--fg-muted);
+  font-size: 1.02rem;
+  line-height: 1.6;
 }
 
-.projects .card-media {
-  aspect-ratio: 16 / 9;
+.project-entry__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
 }
 
-.projects .card-media img {
-  transition: transform .35s ease;
-}
-
-.projects .card:hover .card-media img,
-.projects .card:focus-within .card-media img {
-  transform: scale(1.03);
-}
-
-.projects .card-body {
-  padding: 0.95rem 1rem 1rem;
-}
-
-.projects .card-title {
-  margin: 0 0 0.7rem;
-  font-size: clamp(1.04rem, 1.7vw, 1.2rem);
-  line-height: 1.28;
-}
-
-.projects .card-tags {
-  margin: 0;
-  gap: 0.32rem;
-}
-
-.projects .card-tags li {
-  font-size: 0.72rem;
-  font-weight: 600;
-  padding: 0.16rem 0.5rem;
-  border-radius: 999px;
-  background: color-mix(in oklab, var(--tag-bg) 42%, transparent);
-  border: 1px solid color-mix(in oklab, var(--tag-fg) 20%, var(--border));
+.project-entry__tags li {
+  background: color-mix(in oklab, var(--bg) 70%, #dbeafe);
   color: var(--tag-fg);
-  white-space: nowrap;
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.project-entry__body {
+  max-width: 70ch;
 }
 
 @media (max-width: 640px) {
-  .hero {
-    padding: 1rem;
-  }
-
   .hero h1 {
     max-width: 100%;
   }
 
-  .site-nav a {
-    font-size: 1rem;
+  .project-entry {
+    padding: 1rem;
   }
 }

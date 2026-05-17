@@ -3,21 +3,27 @@
 <meta name="author" content="{{ site.Params.author | default "" }}">
 <meta name="theme-color" content="#0b0d10" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-<link rel="canonical" href="{{ .Permalink }}">
+{{ $baseNoSlash := replaceRE "/$" "" site.BaseURL }}
+{{ $per := .Permalink }}
+{{ $canonical := "" }}
+{{ if findRE "^https?://localhost(:[0-9]+)?" $per }}
+  {{ $canonical = replaceRE "^https?://localhost(:[0-9]+)?" $baseNoSlash $per }}
+{{ else if strings.HasPrefix $per "/" }}
+  {{ $canonical = printf "%s%s" $baseNoSlash $per }}
+{{ else }}
+  {{ $canonical = $per }}
+{{ end }}
+<link rel="canonical" href="{{ $canonical }}">
 
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:description" content="{{ $desc }}">
-<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:url" content="{{ $canonical }}">
 {{ with .Params.cover }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
 <meta name="twitter:card" content="summary_large_image">
 
 {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
-{{ if .IsHome }}
-  {{ $homeCSS := resources.Get "css/home.css" | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $homeCSS.RelPermalink }}" integrity="{{ $homeCSS.Data.Integrity }}">
-{{ end }}
 
 {{ if .IsPage }}{{ if eq .Section "projects" }}
 <script type="application/ld+json">
@@ -26,7 +32,7 @@
   "@type": "CreativeWork",
   "name": {{ .Title | jsonify }},
   "description": {{ $desc | jsonify }},
-  "url": {{ .Permalink | jsonify }}{{ with .Params.cover }},
+  "url": {{ $canonical | jsonify }}{{ with .Params.cover }},
   "image": {{ (. | absURL) | jsonify }}{{ end }}{{ with .Params.liveURL }},
   "sameAs": [{{ . | jsonify }}]{{ end }}
 }
