@@ -2,6 +2,7 @@
 title: "ContentLAB™"
 date: 2024-05-12
 summary: ""
+cover: "images/projects/contentlab.png"
 tags:
   [
     "AV Production",
@@ -13,7 +14,7 @@ tags:
   ]
 ---
 
-[]img
+![Project Image](/av-portfolio/images/projects/placeholder.png)
 
 I initiated a lab that invites participants to engage in constructive and positive content creation, promoting viral marketing skills to craft and share culturally relevant content and stream on platforms such as [Youtube](https://www.youtube.com/@SchmiedeHalleinOfficial), [Twitch](https://www.twitch.tv/schmiedefestival) and [TikTok](https://www.tiktok.com/@schmiede.hallein).
 
