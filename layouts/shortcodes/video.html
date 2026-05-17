@@ -1,0 +1,15 @@
+{{ $src := .Get "src" }}
+{{ $autoplay := .Get "autoplay" | default "false" }}
+{{ $controls := .Get "controls" | default "true" }}
+{{ $muted := .Get "muted" | default "false" }}
+
+<div class="video-container" style="margin-block: 2rem; width: 100%;">
+  <video src="{{ $src }}" 
+         {{ if eq $controls "true" }}controls{{ end }} 
+         {{ if eq $autoplay "true" }}autoplay loop playsinline{{ end }} 
+         {{ if or (eq $autoplay "true") (eq $muted "true") }}muted{{ end }}
+         preload="metadata" 
+         style="width: 100%; height: auto; display: block; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow);">
+    Your browser does not support the video tag.
+  </video>
+</div>
