@@ -20,4 +20,4 @@ I also ran around and documented the 10 days and put it together in a short vide
 Trailer:
 {{< video src="/av-portfolio/videos/trailer.mp4" >}}
 
-full video link coming soon...
+[Full video here](https://youtu.be/j79xhYOTdiw)
